@@ -55,10 +55,10 @@ find_header( 'libpq-fe.h' ) or abort "Can't find the 'libpq-fe.h header"
 find_header( 'libpq/libpq-fs.h' ) or abort "Can't find the 'libpq/libpq-fs.h header"
 find_header( 'pg_config_manual.h' ) or abort "Can't find the 'pg_config_manual.h' header"
 
-abort "Can't find the PostgreSQL client library (libpq)" unless
-	have_library( 'pq', 'PQconnectdb', ['libpq-fe.h'] ) ||
-	have_library( 'libpq', 'PQconnectdb', ['libpq-fe.h'] ) ||
-	have_library( 'ms/libpq', 'PQconnectdb', ['libpq-fe.h'] )
+#abort "Can't find the PostgreSQL client library (libpq)" unless
+	#have_library( 'pq', 'PQconnectdb', ['libpq-fe.h'] ) ||
+	#have_library( 'libpq', 'PQconnectdb', ['libpq-fe.h'] ) ||
+	#have_library( 'ms/libpq', 'PQconnectdb', ['libpq-fe.h'] )
 
 if /mingw/ =~ RUBY_PLATFORM && RbConfig::MAKEFILE_CONFIG['CC'] =~ /gcc/
 	# Work around: https://sourceware.org/bugzilla/show_bug.cgi?id=22504
